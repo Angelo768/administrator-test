@@ -27,6 +27,7 @@ gem 'devise'
 gem 'font-awesome-sass', '~> 5.15.1'
 gem 'devise-bootstrap-views', '~> 1.0'
 gem 'bootstrap', '~> 5.0.0.alpha1'
+gem 'faker'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
