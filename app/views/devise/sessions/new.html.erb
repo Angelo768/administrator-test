@@ -1,0 +1,53 @@
+<style>
+.modal_person{
+  padding-bottom:30px;
+  padding-top:30px;
+  background-color:#3bd95f;
+}
+.text-color-login{
+  color:white;
+}
+</style>
+
+<div style="padding-top:120px;">
+  <div class="container modal-content center modal_person">
+    <center>
+        <div class="text-color-login">
+          <h1 style="font-size:25px;">Painel Admin<br>Adminstrator</h1>
+        </div>
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div style="width:300px;height:300px;" class="text-color-login">
+            <div class="form-group">
+              <%= f.label :email %>
+              <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control', placeholder:"email@example.com" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :Sua_senha %>
+              <%= f.password_field :password, autocomplete: 'current-password', class: 'form-control', placeholder:"minha senha segura" %>
+            </div>
+
+          <% if devise_mapping.rememberable? %>
+            <div class="form-group form-check text-color-login">
+              <%= f.check_box :remember_me, class: 'form-check-input' %>
+              <%= f.label :remember_me, class: 'form-check-label' do %>
+                <%= resource.class.human_attribute_name('Lembrar de mim') %>
+              <% end %>
+            </div>
+          <% end %>
+
+          <div class="form-group text-color-login">
+            <%= f.submit 'Entrar', class: 'btn btn-info' %>
+          </div>
+        <% end %>
+
+        <div class="text-color-login">
+          <%= render 'devise/shared/links' %>
+        </div>
+
+    </center>
+    </div>
+</div>
+  
+</div>

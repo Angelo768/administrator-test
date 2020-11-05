@@ -1,0 +1,42 @@
+<%= form_with(model: projects_performance, local: true) do |form| %>
+  <% if projects_performance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(projects_performance.errors.count, "error") %> prohibited this projects_performance from being saved:</h2>
+
+      <ul>
+        <% projects_performance.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :expected_days %>
+    <%= form.number_field :expected_days %>
+  </div>
+
+  <div class="field">
+    <%= form.label :running_days %>
+    <%= form.number_field :running_days %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phase_status %>
+    <%= form.text_field :phase_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_sprints %>
+    <%= form.number_field :number_of_sprints %>
+  </div>
+
+  <div class="field">
+    <%= form.label :accomplished %>
+    <%= form.number_field :accomplished %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

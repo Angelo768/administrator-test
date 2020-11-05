@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Projects Performances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Expected days</th>
+      <th>Running days</th>
+      <th>Phase status</th>
+      <th>Number of sprints</th>
+      <th>Accomplished</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects_performances.each do |projects_performance| %>
+      <tr>
+        <td><%= projects_performance.expected_days %></td>
+        <td><%= projects_performance.running_days %></td>
+        <td><%= projects_performance.phase_status %></td>
+        <td><%= projects_performance.number_of_sprints %></td>
+        <td><%= projects_performance.accomplished %></td>
+        <td><%= link_to 'Show', projects_performance %></td>
+        <td><%= link_to 'Edit', edit_projects_performance_path(projects_performance) %></td>
+        <td><%= link_to 'Destroy', projects_performance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Projects Performance', new_projects_performance_path %>

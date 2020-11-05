@@ -1,0 +1,62 @@
+<%= form_with(model: projects_manager, local: true) do |form| %>
+  <% if projects_manager.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(projects_manager.errors.count, "error") %> prohibited this projects_manager from being saved:</h2>
+
+      <ul>
+        <% projects_manager.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :start_date %>
+    <%= form.date_select :start_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date %>
+    <%= form.date_select :end_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_changes %>
+    <%= form.number_field :number_of_changes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :service_type %>
+    <%= form.text_field :service_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :project_value %>
+    <%= form.text_field :project_value %>
+  </div>
+
+  <div class="field">
+    <%= form.label :manager %>
+    <%= form.text_field :manager %>
+  </div>
+
+  <div class="field">
+    <%= form.label :allocated_members %>
+    <%= form.text_field :allocated_members %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nps_rate %>
+    <%= form.number_field :nps_rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :observations %>
+    <%= form.text_area :observations %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

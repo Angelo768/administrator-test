@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @projects_manager.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @projects_manager.end_date %>
+</p>
+
+<p>
+  <strong>Number of changes:</strong>
+  <%= @projects_manager.number_of_changes %>
+</p>
+
+<p>
+  <strong>Service type:</strong>
+  <%= @projects_manager.service_type %>
+</p>
+
+<p>
+  <strong>Project value:</strong>
+  <%= @projects_manager.project_value %>
+</p>
+
+<p>
+  <strong>Manager:</strong>
+  <%= @projects_manager.manager %>
+</p>
+
+<p>
+  <strong>Allocated members:</strong>
+  <%= @projects_manager.allocated_members %>
+</p>
+
+<p>
+  <strong>Nps rate:</strong>
+  <%= @projects_manager.nps_rate %>
+</p>
+
+<p>
+  <strong>Observations:</strong>
+  <%= @projects_manager.observations %>
+</p>
+
+<%= link_to 'Edit', edit_projects_manager_path(@projects_manager) %> |
+<%= link_to 'Back', projects_managers_path %>

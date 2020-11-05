@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Projects Managers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Number of changes</th>
+      <th>Service type</th>
+      <th>Project value</th>
+      <th>Manager</th>
+      <th>Allocated members</th>
+      <th>Nps rate</th>
+      <th>Observations</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects_managers.each do |projects_manager| %>
+      <tr>
+        <td><%= projects_manager.start_date %></td>
+        <td><%= projects_manager.end_date %></td>
+        <td><%= projects_manager.number_of_changes %></td>
+        <td><%= projects_manager.service_type %></td>
+        <td><%= projects_manager.project_value %></td>
+        <td><%= projects_manager.manager %></td>
+        <td><%= projects_manager.allocated_members %></td>
+        <td><%= projects_manager.nps_rate %></td>
+        <td><%= projects_manager.observations %></td>
+        <td><%= link_to 'Show', projects_manager %></td>
+        <td><%= link_to 'Edit', edit_projects_manager_path(projects_manager) %></td>
+        <td><%= link_to 'Destroy', projects_manager, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Projects Manager', new_projects_manager_path %>

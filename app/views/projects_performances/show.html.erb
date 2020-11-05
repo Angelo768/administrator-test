@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Expected days:</strong>
+  <%= @projects_performance.expected_days %>
+</p>
+
+<p>
+  <strong>Running days:</strong>
+  <%= @projects_performance.running_days %>
+</p>
+
+<p>
+  <strong>Phase status:</strong>
+  <%= @projects_performance.phase_status %>
+</p>
+
+<p>
+  <strong>Number of sprints:</strong>
+  <%= @projects_performance.number_of_sprints %>
+</p>
+
+<p>
+  <strong>Accomplished:</strong>
+  <%= @projects_performance.accomplished %>
+</p>
+
+<%= link_to 'Edit', edit_projects_performance_path(@projects_performance) %> |
+<%= link_to 'Back', projects_performances_path %>

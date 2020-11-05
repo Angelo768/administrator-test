@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  expected_days: 1
+  running_days: 1
+  phase_status: MyString
+  number_of_sprints: 1
+  accomplished: 1
+
+two:
+  expected_days: 1
+  running_days: 1
+  phase_status: MyString
+  number_of_sprints: 1
+  accomplished: 1

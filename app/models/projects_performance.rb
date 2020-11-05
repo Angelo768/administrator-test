@@ -1,0 +1,2 @@
+class ProjectsPerformance < ApplicationRecord
+end
